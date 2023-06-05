@@ -4,8 +4,8 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ru.eldar.socialmedia.dto.RegistrationRequest;
-import ru.eldar.socialmedia.entity.Account;
+import ru.eldar.socialmedia.dto.user.RegistrationRequest;
+import ru.eldar.socialmedia.entity.User;
 
 import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 
@@ -28,9 +28,9 @@ public class ModeMapperConfiguration {
     }
 
     private void setPasswordMapping(ModelMapper mapper) {
-        var mappingType = mapper.typeMap(RegistrationRequest.class, Account.class);
+        var mappingType = mapper.typeMap(RegistrationRequest.class, User.class);
 
-        mappingType.addMappings(m -> m.skip(Account::setPassword));
+        mappingType.addMappings(m -> m.skip(User::setPassword));
     }
 
 }

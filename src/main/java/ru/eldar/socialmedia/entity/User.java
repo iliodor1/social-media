@@ -1,24 +1,25 @@
 package ru.eldar.socialmedia.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "account")
-public class Account implements UserDetails {
+@Table(name = "users")
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,19 +32,29 @@ public class Account implements UserDetails {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "passwords", nullable = false)
     private String password;
+
+    @OneToMany(mappedBy = "author")
+    private Set<Post> posts;
+
+    @OneToOne
+    private Token refreshToken;
+
+    @Column(name = "role")
+    private UserRole userRole;
 
     @Column(name = "created", nullable = false)
     private LocalDateTime created;
 
-    public void setCreated(){
+    @PrePersist
+    public void onCreate(){
         this.created = LocalDateTime.now();
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.emptyList();
+        return Collections.singletonList(UserRole.USER);
     }
 
     @Override
