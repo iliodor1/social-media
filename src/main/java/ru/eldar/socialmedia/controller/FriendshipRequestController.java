@@ -6,7 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.eldar.socialmedia.entity.FriendshipRequest;
+import ru.eldar.socialmedia.dto.FriendshipRequestDto;
+import ru.eldar.socialmedia.mapper.FriendshipRequestMapper;
 import ru.eldar.socialmedia.service.friendship.FriendshipRequestService;
 
 import java.security.Principal;
@@ -19,44 +20,49 @@ import java.security.Principal;
 public class FriendshipRequestController {
 
     private final FriendshipRequestService friendshipRequestService;
+    private final FriendshipRequestMapper mapper;
 
     @PostMapping("/send/{userId}")
     @Operation(summary = "Request to send friendship request")
-    public ResponseEntity<FriendshipRequest> sendFriendshipRequest(@PathVariable Long userId, Principal principal) {
+    public ResponseEntity<FriendshipRequestDto> sendFriendshipRequest(@PathVariable Long userId, Principal principal) {
         log.info("Request to send friendship request was received");
-        FriendshipRequest request = friendshipRequestService.sendFriendshipRequest(userId, principal);
+        var request = friendshipRequestService.sendFriendshipRequest(userId, principal);
+        var friendshipRequestDto = mapper.toDto(request);
         log.info("Friendship request sent successfully");
 
-        return ResponseEntity.ok(request);
+        return ResponseEntity.ok(friendshipRequestDto);
     }
 
     @PatchMapping("/accept/{userId}")
     @Operation(summary = "Request to accept friendship request")
-    public ResponseEntity<FriendshipRequest> acceptFriendshipRequest(@PathVariable Long userId, Principal principal) {
+    public ResponseEntity<FriendshipRequestDto> acceptFriendshipRequest(@PathVariable Long userId, Principal principal) {
         log.info("Request to accept friendship request was received");
-        FriendshipRequest request = friendshipRequestService.acceptFriendshipRequest(userId, principal);
+        var request = friendshipRequestService.acceptFriendshipRequest(userId, principal);
+        var friendshipRequestDto = mapper.toDto(request);
         log.info("Friendship request accepted successfully");
 
-        return ResponseEntity.ok(request);
+        return ResponseEntity.ok(friendshipRequestDto);
     }
 
     @PatchMapping("/reject/{userId}")
     @Operation(summary = "Request to reject friendship request")
-    public ResponseEntity<FriendshipRequest> rejectFriendshipRequest(@PathVariable Long userId, Principal principal) {
+    public ResponseEntity<FriendshipRequestDto> rejectFriendshipRequest(@PathVariable Long userId, Principal principal) {
         log.info("Request to reject friendship request was received");
-        FriendshipRequest request = friendshipRequestService.rejectFriendshipRequest(userId, principal);
+        var request = friendshipRequestService.rejectFriendshipRequest(userId, principal);
+        var friendshipRequestDto = mapper.toDto(request);
         log.info("Friendship request rejected successfully");
 
-        return ResponseEntity.ok(request);
+        return ResponseEntity.ok(friendshipRequestDto);
     }
 
     @PatchMapping("/unsubscribe/{userId}")
     @Operation(summary = "Request to unsubscribe from user")
-    public ResponseEntity<FriendshipRequest> unsubscribeFromUser(@PathVariable Long userId, Principal principal) {
+    public ResponseEntity<FriendshipRequestDto> unsubscribeFromUser(@PathVariable Long userId, Principal principal) {
         log.info("Request to unsubscribe from user was received");
-        FriendshipRequest request = friendshipRequestService.unsubscribeFromUser(userId, principal);
+        var request = friendshipRequestService.unsubscribeFromUser(userId, principal);
+        var friendshipRequestDto = mapper.toDto(request);
         log.info("User unsubscribed from user {} successfully", userId);
 
-        return ResponseEntity.ok(request);
+        return ResponseEntity.ok(friendshipRequestDto);
     }
 }
