@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.service;
+package ru.eldar.socialmedia.service.user;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.impl.DefaultClaims;
@@ -16,7 +16,6 @@ import ru.eldar.socialmedia.entity.user.User;
 import ru.eldar.socialmedia.exeption.EmailNotUniqueException;
 import ru.eldar.socialmedia.exeption.NotFoundException;
 import ru.eldar.socialmedia.repository.UserRepository;
-import ru.eldar.socialmedia.service.user.UserServiceImpl;
 
 import java.util.Optional;
 

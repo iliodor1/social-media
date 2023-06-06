@@ -36,9 +36,11 @@ public class FriendshipRequestServiceImpl implements FriendshipRequestService {
     public FriendshipRequest sendFriendshipRequest(Long userId, Principal principal) {
         var user = getUserById(userId);
         var follower = getUserByPrincipal(principal);
+        var followerId = follower.getId();
+
         FriendshipRequest friendshipRequest;
 
-        var friendshipRequestOptional = friendshipRepo.findByFollowerIdAndUserId(follower.getId(), user.getId());
+        var friendshipRequestOptional = friendshipRepo.findByFollowerIdAndUserId(followerId, userId);
 
         if (friendshipRequestOptional.isPresent()) {
             friendshipRequest = friendshipRequestOptional.get();
