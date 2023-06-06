@@ -7,7 +7,6 @@ import ru.eldar.socialmedia.dto.PostDto;
 import ru.eldar.socialmedia.entity.Post;
 
 import java.util.Collection;
-import java.util.List;
 
 @Component
 @RequiredArgsConstructor
@@ -23,7 +22,7 @@ public class PostMapper {
         return mapper.map(post, PostDto.class);
     }
 
-    public Collection<PostDto> toDtos(Collection<Post> posts){
+    public Collection<PostDto> toDtos(Collection<Post> posts) {
         return posts.stream().map(this::toDto).toList();
     }
 }

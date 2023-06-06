@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.service;
+package ru.eldar.socialmedia.service.friendship;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -79,10 +79,10 @@ public class FriendshipRequestServiceImpl implements FriendshipRequestService {
             friendshipRequest.setStatus(FOLLOWED);
         } else {
             friendshipRequest = FriendshipRequest.builder()
-                                                 .follower(follower)
-                                                 .user(user)
-                                                 .status(FOLLOWED)
-                                                 .build();
+                    .follower(follower)
+                    .user(user)
+                    .status(FOLLOWED)
+                    .build();
         }
 
         return friendshipRepo.save(friendshipRequest);
@@ -90,21 +90,21 @@ public class FriendshipRequestServiceImpl implements FriendshipRequestService {
 
     private User getUserById(Long userId) {
         return userRepository.findById(userId)
-                             .orElseThrow(() -> new UsernameNotFoundException("User not found id=" + userId));
+                .orElseThrow(() -> new UsernameNotFoundException("User not found id=" + userId));
     }
 
     private User getUserByPrincipal(Authentication authentication) {
         var email = authentication.getName();
 
         return userRepository.findByEmail(email)
-                             .orElseThrow(() -> new NotFoundException(
-                                     String.format("User not found email=%s", email)
-                             ));
+                .orElseThrow(() -> new NotFoundException(
+                        String.format("User not found email=%s", email)
+                ));
     }
 
     private FriendshipRequest getFriendshipRequest(Long id) {
         return friendshipRepo.findById(id)
-                             .orElseThrow(() -> new NotFoundException("Friendship request not found id=" + id));
+                .orElseThrow(() -> new NotFoundException("Friendship request not found id=" + id));
     }
 }
 

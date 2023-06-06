@@ -13,9 +13,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.GenericFilterBean;
-import ru.eldar.socialmedia.dto.JwtAuthentication;
+import ru.eldar.socialmedia.entity.JwtAuthentication;
 import ru.eldar.socialmedia.util.JwtUtils;
 
+/**
+ * JwtFilter is a filter that intercepts incoming requests and validates JWT tokens in the "Authorization" header.
+ *
+ * @author eldar
+ */
 @Slf4j
 @Component
 @RequiredArgsConstructor
@@ -25,6 +30,15 @@ public class JwtFilter extends GenericFilterBean {
 
     private final JwtProvider jwtProvider;
 
+    /**
+     * Performs the filter operation.
+     *
+     * @param request  The servlet request.
+     * @param response The servlet response.
+     * @param fc       The filter chain.
+     * @throws IOException      If an I/O error occurs during the filter operation.
+     * @throws ServletException If a servlet-related error occurs during the filter operation.
+     */
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain fc)
             throws IOException, ServletException, java.io.IOException {

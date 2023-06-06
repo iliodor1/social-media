@@ -1,10 +1,10 @@
 package ru.eldar.socialmedia.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.hibernate.Hibernate;
-
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Getter

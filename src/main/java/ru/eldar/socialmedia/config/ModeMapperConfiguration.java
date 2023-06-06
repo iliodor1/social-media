@@ -9,18 +9,27 @@ import ru.eldar.socialmedia.entity.User;
 
 import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 
+/**
+ * Mode mapper configuration class
+ *
+ * @author eldar
+ */
 @Configuration
 public class ModeMapperConfiguration {
-
+    /**
+     * Method creates a model mapper bean and configures it
+     *
+     * @return modelMapper bean
+     */
     @Bean
     public ModelMapper modelMapper() {
         var mapper = new ModelMapper();
 
         mapper.getConfiguration()
-              .setMatchingStrategy(MatchingStrategies.STRICT)
-              .setFieldMatchingEnabled(true)
-              .setSkipNullEnabled(true)
-              .setFieldAccessLevel(PRIVATE);
+                .setMatchingStrategy(MatchingStrategies.STRICT)
+                .setFieldMatchingEnabled(true)
+                .setSkipNullEnabled(true)
+                .setFieldAccessLevel(PRIVATE);
 
         setPasswordMapping(mapper);
 

@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.service;
+package ru.eldar.socialmedia.service.post;
 
 import ru.eldar.socialmedia.entity.Post;
 

@@ -16,7 +16,7 @@ public class UserMapper {
 
     private final PasswordEncoder encoder;
 
-    public User toUser(RegistrationRequest registrationRequest){
+    public User toUser(RegistrationRequest registrationRequest) {
         var user = mapper.map(registrationRequest, User.class);
 
         user.setPassword(encoder.encode(registrationRequest.getPassword()));
@@ -24,7 +24,7 @@ public class UserMapper {
         return user;
     }
 
-    public RegistrationResponse toRegistrationResponse(User user){
+    public RegistrationResponse toRegistrationResponse(User user) {
         return mapper.map(user, RegistrationResponse.class);
     }
 }

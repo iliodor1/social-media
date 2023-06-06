@@ -13,12 +13,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "User registration request body")
-public class RegistrationRequest {
-
-    @NotBlank(message = "Username is mandatory")
-    @Schema(description = "Username", example = "user")
-    private String username;
+@Schema(description = "Authentication request body")
+public class AuthenticationRequest {
 
     @Email(message = "Invalid email")
     @Schema(description = "User email", example = "user@email.com")
@@ -28,5 +24,4 @@ public class RegistrationRequest {
     @Size(min = 6, max = 30, message = "Password must contain from 6 to 30 characters")
     @Schema(description = "User password", example = "password")
     private String password;
-
 }

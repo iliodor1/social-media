@@ -2,7 +2,7 @@ package ru.eldar.socialmedia.util;
 
 import io.jsonwebtoken.Claims;
 import lombok.NoArgsConstructor;
-import ru.eldar.socialmedia.dto.JwtAuthentication;
+import ru.eldar.socialmedia.entity.JwtAuthentication;
 
 @NoArgsConstructor
 public final class JwtUtils {
