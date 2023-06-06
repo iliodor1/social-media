@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.eldar.socialmedia.dto.FriendshipRequestDto;
+import ru.eldar.socialmedia.dto.friendship.FriendshipRequestDto;
 import ru.eldar.socialmedia.mapper.FriendshipRequestMapper;
 import ru.eldar.socialmedia.service.friendship.FriendshipRequestService;
 

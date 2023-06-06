@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.dto;
+package ru.eldar.socialmedia.dto.post;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Max;
