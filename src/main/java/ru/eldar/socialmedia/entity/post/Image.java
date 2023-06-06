@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.entity;
+package ru.eldar.socialmedia.entity.post;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

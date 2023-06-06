@@ -1,7 +1,7 @@
 package ru.eldar.socialmedia.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.eldar.socialmedia.entity.FriendshipRequest;
+import ru.eldar.socialmedia.entity.friendship.FriendshipRequest;
 
 import java.util.Optional;
 

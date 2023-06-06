@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import ru.eldar.socialmedia.dto.post.PostDto;
-import ru.eldar.socialmedia.entity.Post;
+import ru.eldar.socialmedia.entity.post.Post;
 
 import java.util.Collection;
 

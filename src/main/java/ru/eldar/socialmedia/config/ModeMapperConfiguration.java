@@ -5,7 +5,7 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.eldar.socialmedia.dto.user.RegistrationRequest;
-import ru.eldar.socialmedia.entity.User;
+import ru.eldar.socialmedia.entity.user.User;
 
 import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 

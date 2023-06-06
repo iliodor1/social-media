@@ -2,8 +2,8 @@ package ru.eldar.socialmedia.service.post;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.eldar.socialmedia.entity.Post;
-import ru.eldar.socialmedia.entity.User;
+import ru.eldar.socialmedia.entity.post.Post;
+import ru.eldar.socialmedia.entity.user.User;
 import ru.eldar.socialmedia.exeption.ForbiddenException;
 import ru.eldar.socialmedia.exeption.NotFoundException;
 import ru.eldar.socialmedia.repository.PostRepository;

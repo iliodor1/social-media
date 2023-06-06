@@ -6,11 +6,12 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.eldar.socialmedia.entity.post.Post;
 
 import java.util.List;
 
 /**
- * A DTO for the {@link ru.eldar.socialmedia.entity.Post} entity
+ * A DTO for the {@link Post} entity
  */
 @Data
 @AllArgsConstructor

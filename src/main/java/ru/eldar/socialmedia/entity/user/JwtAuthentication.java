@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.entity;
+package ru.eldar.socialmedia.entity.user;
 
 import lombok.Getter;
 import lombok.Setter;

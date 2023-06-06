@@ -1,6 +1,6 @@
 package ru.eldar.socialmedia.service.friendship;
 
-import ru.eldar.socialmedia.entity.FriendshipRequest;
+import ru.eldar.socialmedia.entity.friendship.FriendshipRequest;
 
 import java.security.Principal;
 

@@ -6,7 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import ru.eldar.socialmedia.dto.user.RegistrationRequest;
 import ru.eldar.socialmedia.dto.user.RegistrationResponse;
-import ru.eldar.socialmedia.entity.User;
+import ru.eldar.socialmedia.entity.user.User;
 
 @Component
 @RequiredArgsConstructor

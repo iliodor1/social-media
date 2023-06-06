@@ -5,9 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.eldar.socialmedia.entity.user.User;
 
 /**
- * DTO for {@link ru.eldar.socialmedia.entity.User}
+ * DTO for {@link User}
  */
 @Data
 @Builder

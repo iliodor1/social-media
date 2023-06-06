@@ -13,7 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.GenericFilterBean;
-import ru.eldar.socialmedia.entity.JwtAuthentication;
+import ru.eldar.socialmedia.entity.user.JwtAuthentication;
 import ru.eldar.socialmedia.util.JwtUtils;
 
 /**

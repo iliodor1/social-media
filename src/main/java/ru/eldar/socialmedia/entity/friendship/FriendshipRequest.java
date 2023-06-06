@@ -1,8 +1,9 @@
-package ru.eldar.socialmedia.entity;
+package ru.eldar.socialmedia.entity.friendship;
 
 import jakarta.persistence.*;
 import lombok.*;
-import ru.eldar.socialmedia.entity.enums.Status;
+import ru.eldar.socialmedia.entity.friendship.enums.Status;
+import ru.eldar.socialmedia.entity.user.User;
 
 @Entity
 @Getter

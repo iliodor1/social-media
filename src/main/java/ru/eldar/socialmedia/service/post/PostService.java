@@ -1,6 +1,6 @@
 package ru.eldar.socialmedia.service.post;
 
-import ru.eldar.socialmedia.entity.Post;
+import ru.eldar.socialmedia.entity.post.Post;
 
 import java.security.Principal;
 import java.util.Collection;

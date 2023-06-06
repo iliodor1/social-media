@@ -5,10 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.eldar.socialmedia.entity.enums.Status;
+import ru.eldar.socialmedia.entity.friendship.FriendshipRequest;
+import ru.eldar.socialmedia.entity.friendship.enums.Status;
 
 /**
- * DTO for {@link ru.eldar.socialmedia.entity.FriendshipRequest}
+ * DTO for {@link FriendshipRequest}
  */
 @Data
 @Builder

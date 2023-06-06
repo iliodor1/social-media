@@ -13,7 +13,7 @@ import ru.eldar.socialmedia.config.JwtProvider;
 import ru.eldar.socialmedia.dto.user.AuthenticationRequest;
 import ru.eldar.socialmedia.dto.user.AuthenticationResponse;
 import ru.eldar.socialmedia.dto.user.RefreshJwtResponse;
-import ru.eldar.socialmedia.entity.User;
+import ru.eldar.socialmedia.entity.user.User;
 import ru.eldar.socialmedia.exeption.EmailNotUniqueException;
 import ru.eldar.socialmedia.exeption.NotFoundException;
 import ru.eldar.socialmedia.repository.UserRepository;

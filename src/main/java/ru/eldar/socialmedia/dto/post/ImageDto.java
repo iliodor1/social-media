@@ -6,9 +6,10 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.eldar.socialmedia.entity.post.Image;
 
 /**
- * A DTO for the {@link ru.eldar.socialmedia.entity.Image} entity
+ * A DTO for the {@link Image} entity
  */
 @Data
 @NoArgsConstructor

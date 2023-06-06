@@ -1,9 +1,10 @@
-package ru.eldar.socialmedia.entity;
+package ru.eldar.socialmedia.entity.user;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import ru.eldar.socialmedia.entity.post.Post;
 
 import java.time.LocalDateTime;
 import java.util.Collection;

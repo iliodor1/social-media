@@ -1,4 +1,4 @@
-package ru.eldar.socialmedia.entity;
+package ru.eldar.socialmedia.entity.post;
 
 
 import jakarta.persistence.*;
@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ru.eldar.socialmedia.entity.user.User;
 
 import java.time.LocalDateTime;
 import java.util.List;

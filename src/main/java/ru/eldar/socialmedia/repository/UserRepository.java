@@ -1,7 +1,7 @@
 package ru.eldar.socialmedia.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.eldar.socialmedia.entity.User;
+import ru.eldar.socialmedia.entity.user.User;
 
 import java.util.Optional;
 

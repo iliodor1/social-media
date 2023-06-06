@@ -3,9 +3,9 @@ package ru.eldar.socialmedia.service.friendship;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ru.eldar.socialmedia.entity.FriendshipRequest;
-import ru.eldar.socialmedia.entity.User;
-import ru.eldar.socialmedia.entity.enums.Status;
+import ru.eldar.socialmedia.entity.friendship.FriendshipRequest;
+import ru.eldar.socialmedia.entity.user.User;
+import ru.eldar.socialmedia.entity.friendship.enums.Status;
 import ru.eldar.socialmedia.exeption.BadRequestException;
 import ru.eldar.socialmedia.exeption.NotFoundException;
 import ru.eldar.socialmedia.repository.FriendshipRequestRepository;
@@ -13,7 +13,7 @@ import ru.eldar.socialmedia.repository.UserRepository;
 
 import java.security.Principal;
 
-import static ru.eldar.socialmedia.entity.enums.Status.*;
+import static ru.eldar.socialmedia.entity.friendship.enums.Status.*;
 
 /**
  * FriendshipRequestServiceImpl is an implementation of the FriendshipRequestService interfaces.
