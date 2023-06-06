@@ -1,7 +1,10 @@
 package ru.eldar.socialmedia.dto.friendship;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.eldar.socialmedia.entity.enums.Status;
 
 /**
@@ -23,6 +26,6 @@ public class FriendshipRequestDto {
     @Schema(description = "User")
     private UserDto user;
 
-    @Schema(description ="Status", example = "FOLLOWED")
+    @Schema(description = "Status", example = "FOLLOWED")
     private Status status;
 }
